@@ -1,0 +1,8 @@
+# Ignore Visual Studio folder
+.vs/
+*.db
+*.suo
+*.user
+*.cache
+*.idx
+*.log

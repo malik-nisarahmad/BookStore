@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping Cart</title>
+  <link rel="stylesheet" href="style.css">
+   <!-- Add Font Awesome for social media icons -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    body {
+      background-image: url('images/image1.png');
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .header {
+      background-color: #1e0f53;
+      color: white;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .header a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.2em;
+    }
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+      max-width: 1200px;
+      margin: 20px auto;
+      gap: 20px;
+    }
+
+    .product-list {
+      flex: 3;
+      background-color: white;
+      border-radius: 10px;
+      padding: 20px;
+      background-color: rgba(255,255,255,0.7);
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .product-list h2 {
+      margin: 0 0 20px;
+      font-size: 1.5em;
+      border-bottom: 2px solid #f0f0f0;
+      padding-bottom: 10px;
+    }
+
+    .product-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 15px 0;
+      border-bottom: 1px solid #f0f0f0;
+    }
+
+    .product-item:last-child {
+      border-bottom: none;
+    }
+
+    .product-image img {
+      width: 80px;
+      border-radius: 5px;
+    }
+
+    .product-info {
+      flex: 1;
+      margin-left: 15px;
+    }
+
+    .product-info h4 {
+      margin: 0;
+      font-size: 1.2em;
+      color: #333;
+    }
+
+    .product-info p {
+      margin: 5px 0 0;
+      color: #888;
+    }
+
+    .quantity-controls {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .quantity-controls button {
+      background-color: #3478bc;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      font-size: 1em;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    .quantity-controls button:hover {
+      background-color: #3478bc;
+    }
+
+    .quantity-controls input {
+      width: 50px;
+      text-align: center;
+      padding: 5px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+
+    .remove-item {
+      color: #f4f3f3;
+      font-size: 0.9em;
+      background: none;
+      background-color: #3478bc;
+      border: none;
+      padding: 10px 18px;
+      cursor: pointer;
+      border-radius: 7px;
+    }
+
+    .remove-item:hover {
+     background-color: #cc5200;
+    }
+
+    .order-summary {
+      flex: 1;
+      background-color: white;
+      border-radius: 10px;
+      padding: 20px;
+      background-color: rgba(255,255,255,0.7);
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .order-summary h2 {
+      margin: 0 0 20px;
+      font-size: 1.5em;
+      border-bottom: 2px solid #f0f0f0;
+      padding-bottom: 10px;
+    }
+
+    .summary-item {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 15px;
+    }
+
+    .summary-item p {
+      margin: 0;
+      font-size: 1em;
+      color: #333;
+    }
+
+    .summary-item .total {
+      font-weight: bold;
+      font-size: 1.2em;
+    }
+
+    .apply-code {
+      margin: 20px 0;
+      display: flex;
+      gap: 10px;
+    }
+
+    .apply-code input {
+      flex: 1;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+
+    .apply-code button {
+      background-color: #FF6600;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 1em;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    .apply-code button:hover {
+      background-color: #cc5200;
+    }
+
+    .checkout-btn {
+      width: 100%;
+      padding: 15px 20px;
+      font-size: 1.2em;
+      color: white;
+      background-color: #FF6600;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+
+    .checkout-btn:hover {
+      background-color: #cc5200;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="navbar">
+        <div class="logo-pic">
+            <img src="images/logo.png" alt="" class="logo">
+        </div>
+        <div class="name">
+            <h1>The Book Nook</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="Home Page.html">Home</a></li>
+                <li><a href="categorie.html">Categories</a></li>
+                <li><a href="Details.html">Details</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="Payment Page.html">Payment</a></li>
+                <li><a href="Login Page.html">Login</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+  <header class="header">
+    <a href="#">Categories</a>
+    <div>Shopping Cart</div>
+  </header>
+  <div class="container">
+    <div class="product-list">
+      <h2>Your Cart</h2>
+      <div class="product-item">
+        <div class="product-image">
+          <img src="images/3.jpg" alt="Product Image">
+        </div>
+        <div class="product-info">
+          <h4>The Night Circus</h4>
+          <p>Author: Erin Morgenstern</p>
+        </div>
+        <div class="quantity-controls">
+          <button>-</button>
+          <input type="number" value="1" min="1">
+          <button>+</button>
+        </div>
+        <p>$14.98</p>
+        <button class="remove-item">Remove</button>
+      </div>
+      <div class="product-item">
+        <div class="product-image">
+          <img src="images/1.jpg" alt="Product Image">
+        </div>
+        <div class="product-info">
+          <h4>Lord Of The Rings</h4>
+          <p>Author: J.R.R. Tolkien</p>
+        </div>
+        <div class="quantity-controls">
+          <button>-</button>
+          <input type="number" value="1" min="1">
+          <button>+</button>
+        </div>
+        <p> $49.50</p>
+        <button class="remove-item">Remove</button>
+      </div>
+    </div>
+    <div class="order-summary">
+      <h2>Order Summary</h2>
+      <div class="summary-item">
+        <p>Subtotal (2 items)</p>
+        <p>$64.48</p>
+      </div>
+      <div class="summary-item">
+        <p>Shipping Fee</p>
+        <p>$5.00</p>
+      </div>
+      <div class="summary-item">
+        <p>Shipping Discount</p>
+        <p>-$5.00</p>
+      </div>
+      <div class="summary-item total">
+        <p>Total</p>
+        <p>$64.48</p>
+      </div>
+      <div class="apply-code">
+        <input type="text" placeholder="Enter voucher code">
+        <button>Apply</button>
+      </div>
+      <button class="checkout-btn">Proceed to Checkout</button>
+    </div>
+  </div>
+  <footer class="footer" style="border-top: 1px solid white;">
+    <div class="container py-4">
+        <div class="row">
+            <div class="col-md-4">
+                <h5>About Us</h5>
+                <p>We are a passionate team dedicated to bringing you the best collection of books. Whether you're into bestsellers, hidden gems, or classic literature, we've got something for every reader.</p>
+            </div>
+            <div class="col-md-4">
+                <h5>Quick Links</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Categories</a></li>
+                    <li><a href="#">Details</a></li>
+                    <li><a href="#">Cart</a></li>
+                    <li><a href="#">Payment</a></li>
+                    <li><a href="#">Login</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h5>Contact Us</h5>
+                <ul class="list-unstyled">
+                    <li>Email: nisarop00@gmail.com</li>
+                    <li>Phone: 03298126076</li>
+                    <li>Address: G-12</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom text-center py-3">
+            <div class="social-icons">
+                <a href="https://www.facebook.com/yourprofile" class="social-icon" id="s1" target="_blank" title="Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://twitter.com/yourprofile" class="social-icon" id="s2" target="_blank" title="Twitter">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://www.instagram.com/yourprofile" class="social-icon" id="s3" target="_blank" title="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.linkedin.com/yourprofile" class="social-icon" id="s4" target="_blank" title="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+            </div>
+        </div>
+        <div class="footer-bottom text-center py-3">
+            <p>&copy; 2024 The Book Nook. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

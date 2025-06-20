@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Details</title>
+  <link rel="stylesheet" href="style.css">
+   <!-- Add Font Awesome for social media icons -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #333;
+      color: white;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 30px auto;
+      padding: 20px;
+      background-color: black;
+      color: white;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+    }
+    .book-details {
+      display: flex;
+      flex-wrap: wrap; 
+      gap: 20px;
+      align-items: flex-start;
+    }
+
+    .book-image img {
+      max-width: 250px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .book-info {
+      flex: 1;
+      max-width: 600px;
+    }
+
+    .book-info h1 {
+      margin-top: 0;
+      color: white;
+      font-size: 2rem;
+    }
+
+    .price {
+      color: white;
+      font-size: 1.5em;
+      margin: 10px 0;
+      font-weight: bold;
+    }
+
+    .book-info p {
+      line-height: 1.6;
+      margin: 10px 0;
+      color: white;
+    }
+
+    .add-to-cart {
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      font-size: 1em;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    .add-to-cart:hover {
+      background-color: #0056b3;
+    }
+
+
+    .recommended {
+      margin-top: 40px;
+    }
+
+    .recommended h2 {
+      margin-bottom: 20px;
+      font-size: 1.8rem;
+      color: white;
+    }
+
+    .recommended-books {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: space-evenly;
+    }
+
+    .recommended-books .book {
+      text-align: center;
+      width: 150px;
+    }
+
+    .recommended-books .book img {
+      width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .recommended-books .book img:hover {
+      transform: scale(1.05);
+    }
+
+    .recommended-books .book p {
+      margin-top: 10px;
+      font-size: 1em;
+      font-weight: bold;
+      color: white;
+    }
+
+    .back-btn {
+      display: inline-block;
+      margin-top: 20px;
+      color: white;
+      background-color: #007BFF;
+      padding: 10px 25px;
+      font-size: 1em;
+      font-weight: bold;
+      border-radius: 5px;
+      text-decoration: none;
+    }
+
+    .back-btn:hover {
+      background-color: #0056b3;
+    }
+
+
+    .background-container {
+      background-image: url('images/image1.png'); 
+      background: linear-gradient(rgba(0, 0, 0, 0.688), rgba(0, 0, 0, 0.836)), url('images/image1.png');
+      background-size: cover;
+      background-position: center;
+      min-height: 100vh;
+      padding: 20px 0;
+    }
+
+      .recommended-books {
+        gap: 15px;
+      }
+    
+  </style>
+</head>
+<body>
+  <header>
+    <div class="navbar">
+        <div class="logo-pic">
+            <img src="images/logo.png" alt="" class="logo">
+        </div>
+        <div class="name">
+            <h1>The Book Nook</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="Home Page.html">Home</a></li>
+                <li><a href="categorie.html">Categories</a></li>
+                <li><a href="Details.html">Details</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="Payment Page.html">Payment</a></li>
+                <li><a href="Login Page.html">Login</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+  <div class="background-container">
+    <div class="container">
+      <div class="book-details">
+        <div class="book-image">
+          <img src="images/1.jpg" alt="Book Cover">
+        </div>
+        <div class="book-info">
+          <h1>Lord Of The Rings</h1>
+          <p><b>Author:</b> J.R.R. Tolkien</p>
+          <p class="price">$15.99</p>
+          <p>
+            The Lord of the Rings is about the war of the peoples of the fantasy world Middle-earth 
+            against a dark lord known as "Sauron." At the same time, they try to destroy a ring 
+            that would give Sauron great power if he regained it. The only way to destroy it is by venturing into Sauron's land, Mordor.
+          </p>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+      </div>
+      <div class="recommended">
+        <h2>Recommended Books</h2>
+        <div class="recommended-books">
+          <div class="book">
+            <img src="images/5.jpeg" alt="Recommended Book 1">
+            <p>The Song of Achilles</p>
+          </div>
+          <div class="book">
+            <img src="images/3.jpg" alt="Recommended Book 2">
+            <p>The Night Circus</p>
+          </div>
+          <div class="book">
+            <img src="images/8.jpg" alt="Recommended Book 3">
+            <p>The Rage of Dragons</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="text-align: center;">
+      <a href="categories.html" class="back-btn">Back to Categories</a>
+    </div>
+  </div>
+  <footer class="footer" style="border-top: 1px solid white;background-color: black;">
+    <div class="container py-4">
+        <div class="row">
+            <div class="col-md-4">
+                <h5>About Us</h5>
+                <p>We are a passionate team dedicated to bringing you the best collection of books. Whether you're into bestsellers, hidden gems, or classic literature, we've got something for every reader.</p>
+            </div>
+            <div class="col-md-4">
+                <h5>Quick Links</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Categories</a></li>
+                    <li><a href="#">Details</a></li>
+                    <li><a href="#">Cart</a></li>
+                    <li><a href="#">Payment</a></li>
+                    <li><a href="#">Login</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h5>Contact Us</h5>
+                <ul class="list-unstyled">
+                    <li>Email: nisarop00@gmail.com</li>
+                    <li>Phone: 03298126076</li>
+                    <li>Address: G-12</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom text-center py-3">
+            <div class="social-icons">
+                <a href="https://www.facebook.com/yourprofile" class="social-icon" id="s1" target="_blank" title="Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://twitter.com/yourprofile" class="social-icon" id="s2" target="_blank" title="Twitter">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://www.instagram.com/yourprofile" class="social-icon" id="s3" target="_blank" title="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.linkedin.com/yourprofile" class="social-icon" id="s4" target="_blank" title="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+            </div>
+        </div>
+        <div class="footer-bottom text-center py-3">
+            <p>&copy; 2024 The Book Nook. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

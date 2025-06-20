@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Categories - The Book Nook</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            color: white;
+            background-color: black;
+        }
+
+        .navbar {
+            background-color: rgba(0, 0, 0, 0.694);
+            padding: 10px;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar .logo-pic img {
+            width: 50px;
+            height: 50px;
+        }
+
+        .navbar ul {
+            list-style: none;
+            display: flex;
+        }
+
+        .navbar ul li {
+            margin-left: 20px;
+        }
+
+        .navbar ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .category-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            padding: 50px 10%;
+            margin-top: 40px;
+        }
+        main{
+            background-color: rgba(0, 0, 0, 0.501);
+
+        }
+        .category {
+            width: 250px;
+            height: 350px;
+            margin: 30px;
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+            transition: all 0.3s ease;
+            transform-style: preserve-3d;
+            cursor: pointer;
+        }
+        .category img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .category-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 2em;
+            font-weight: bold;
+            text-shadow: 2px 2px 10px white;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .category:hover .category-text {
+            opacity: 1;
+        }
+
+        .category:hover {
+            transform: rotateY(10deg) rotateX(10deg);
+            box-shadow: 0px 20px 40px white;
+        }
+
+        .category:hover img {
+            transform: scale(1.1);
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Nav Bar -->
+    <header class="navbar">
+        <div class="logo-pic">
+            <img src="images/logo.png" alt="Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="Home Page.html">Home</a></li>
+                <li><a href="categories.html">Categories</a></li>
+                <li><a href="Details.html">Details</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="Payment Page.html">Payment</a></li>
+                <li><a href="Login Page.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Categories Section -->
+    <main>
+        <h1 style="text-align: center; font-size: 2.5em; color: #333; margin-top: 40px;">Explore Our Book Categories</h1>
+        <div class="category-container">
+            <!-- Category 1: Fiction -->
+            <div class="category">
+                <img src="images/12.jpeg" alt="Fiction Category">
+                <div class="category-text">Fiction</div>
+            </div>
+            <!-- Category 2: Non-Fiction -->
+            <div class="category">
+                <img src="images/3.jpg" alt="Non-Fiction Category">
+                <div class="category-text">Non-Fiction</div>
+            </div>
+            <!-- Category 3: Science -->
+            <div class="category">
+                <img src="images/5.jpeg" alt="Science Category">
+                <div class="category-text">Science</div>
+            </div>
+            <!-- Category 4: History -->
+            <div class="category">
+                <img src="images/6.jpeg" alt="History Category">
+                <div class="category-text">History</div>
+            </div>
+            <!-- Category 5: Mystery -->
+            <div class="category">
+                <img src="images/8.jpg" alt="Mystery Category">
+                <div class="category-text">Mystery</div>
+            </div>
+            <!-- Category 6: Fantasy -->
+            <div class="category">
+                <img src="images/2.jpeg" alt="Fantasy Category">
+                <div class="category-text">Fantasy</div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer
+    <footer>
+        <p>&copy; 2024 The Book Nook. All rights reserved.</p>
+    </footer> -->
+
+</body>
+</html>
